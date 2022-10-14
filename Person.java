@@ -7,9 +7,9 @@ public class Person {
     private int age;
 
     // builder
-    public Person(String parName, int parAge){
-        name = parName;
-        age = parAge;
+    public Person(String name, int age){
+        this.name = name; //// name = parName;
+        this.age = age; //// age = parAge;
     }
 
     //identity
@@ -31,9 +31,13 @@ public class Person {
         return age;
     }
 
-    // object by strings
+    public void setName(String name){
+        this.name = name;
+    }
 
-    public String toString(){
+    // object by strings 
+
+    public String toString(){ // representation in strings by objects
         return this.name + ":" + this.age;
     }
 }
